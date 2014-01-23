@@ -71,6 +71,11 @@ jQuery(function($){
     ); 
 
     //create successfulRequest function
+    succcessfulRequest: function(jsonResponse){
+    alert('Request sent!');
+   
+    //change UI based on response from WordPress
+    }, 
   }
 
   $(document).ready(function(){
