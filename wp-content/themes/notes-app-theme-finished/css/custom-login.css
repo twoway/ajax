@@ -1,0 +1,20 @@
+/* A custom login form for the ultimate app experience */
+
+body.login { background: #f8f0b1 url(../img/lines.png); }
+body.login div#login { padding-top: 15px; }
+body.login div#login h1 { display: none; }
+body.login div#login h1 a {}
+body.login div#login form#loginform { background: transparent; box-shadow: none; border: none; }
+body.login div#login form#loginform p { line-height: 42px; text-align: center; margin-bottom: -13px;}
+body.login div#login form#loginform p label { display: inline-block; background: transparent; font-weight: bold; border: none; }
+body.login div#login form#loginform input { padding: 0 10px; margin-top: 20px; background: rgba(255,255,255,0.4); height: 42px; border: none; float: none;}
+body.login div#login form#loginform input#user_login { margin-top: 1px; }
+body.login div#login form#loginform input#user_pass { margin-top: 1px; }
+body.login div#login form#loginform p.forgetmenot { display: none;}
+body.login div#login form#loginform p.forgetmenot input#rememberme { display: none; }
+body.login div#login form#loginform p.submit {}
+body.login div#login form#loginform p.submit input#wp-submit { margin-top: 39px; width: 100%; background: #fff; color: #404040; font-weight: bold; box-shadow: 0 2px 1px #aaa; border: 1px solid #ddd; }
+body.login div#login p#nav { display: none; }
+body.login div#login p#nav a {}
+body.login div#login p#backtoblog { display: none; }
+body.login div#login p#backtoblog a {}
