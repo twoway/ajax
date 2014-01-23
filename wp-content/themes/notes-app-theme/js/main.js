@@ -62,6 +62,13 @@ jQuery(function($){
     //create UISendRequest function
 
     //create processRequest function
+    processRequest: function(data){
+    console.log(data);
+    $.post(
+      WP_AJAX.ajaxurl,
+      data,
+      Notes.succcessfulRequest
+    ); 
 
     //create successfulRequest function
   }
