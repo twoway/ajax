@@ -5,6 +5,7 @@ jQuery(function($){
       Notes.usersMenu();
       Notes.listenForChanges();
       //actions call
+      Notes.actions();
       //UISendRequest call
     },
 
@@ -55,8 +56,27 @@ jQuery(function($){
     actions: function(){
       $('.notice').addClass('hidden');
 
-        //handle action events
+      $('.action').live('click', function(e){
 
+        e.preventDefault();
+
+        var action = 'notes-' + $(this).data('action');
+        var modal  = $(this).data('modal');
+        var id     = $(this).data('id');
+        var text   = $(this).parent('li').find('input').val();
+
+        var data = {
+          action: action,
+          id: id,
+          text: text
+        };
+
+        if( modal === "" ){
+          Notes.processRequest(data)
+        } else if ( modal != "" ){
+          Notes.openNotice(modal, data);
+        }
+      });
     },
 
     //create UISendRequest function
@@ -68,7 +88,7 @@ jQuery(function($){
       WP_AJAX.ajaxurl,
       data,
       Notes.succcessfulRequest
-    ); 
+    );
 
     //create successfulRequest function
     succcessfulRequest: function(jsonResponse){
