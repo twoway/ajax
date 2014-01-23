@@ -61,6 +61,11 @@ function register_scripts_and_styles(){
   wp_enqueue_script( 'main', TEMPL_PATH.'/js/main.js', array('jquery'), false, true );
 
   //WP LOCALIZE SCRIPT
+  wp_localize_script(
+  'main',
+  'WP_AJAX',
+  array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) )
+  );
   
 }
 
